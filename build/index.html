@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'> </head>
+<body class="container">
+  <h1>Register Application</h1>
+  <form id="registerForm" class="form-horizontal" method="post">
+    <div class="well well-lg">
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="businessName">Business Name:</label>
+        <div class="col-sm-6">
+          <label for="bname">BussinessName</label>
+          <input class="form-control" type="text" id="businessName" name="businessName" maxlength="32"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="address">Address:</label>
+        <div class="col-sm-6">
+          <input class="form-control" type="text" id="address" name="address" maxlength="32"> </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="projectName">Project Name:</label>
+        <div class="col-sm-6">
+          <input class="form-control" type="text" id="projectName" name="projectName" maxlength="32"> </div>
+      </div>
+      <p id="errorMessage">
+        <p>
+          <div class="form-group">
+            <div class="col-sm-8">
+              <button type="button" id="queryBtn" onclick="query()" class="btn btn-warning pull-right active">QueryCompany</button>
+              <button type="button" id="registerBtn" onclick="register()" class="btn btn-primary pull-right active">Register</button>
+            </div>
+          </div>
+    </div>
+  </form>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Address</th>
+          <th>Project</th>
+          <th>Regist.Date</th>
+        </tr>
+      </thead>
+      <tbody> </tbody>
+    </table>
+    <div id="msg"></div>
+  </div>
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="app.js"></script> </html>
